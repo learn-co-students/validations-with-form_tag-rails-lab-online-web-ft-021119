@@ -16,7 +16,19 @@ class AuthorsController < ApplicationController
   end
 
   def show
-    redirect_to 'authors/show/:id'
+  end
+
+  def edit
+  end
+
+  def update
+    @author.assign_attributes(author_params)
+    if @author.valid?
+      @author.save
+      redirect_to post_path(@author)
+    else
+      render :edit
+    end
   end
 
   private
