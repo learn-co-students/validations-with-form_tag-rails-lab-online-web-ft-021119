@@ -1,7 +1,6 @@
-<h2>Create an Author</h2>
+<h2>Edit Author</h2>
 
-
-<%= form_tag("/authors") do %>
+<%= form_tag author_path(@author), method: "patch" do %>
  <% if @author.errors.any? %>
    <div id="error_explanation">
      <h2>Please fix the following errors:</h2>
@@ -19,7 +18,7 @@
  </div>
 
  <div class="field<%= ' field_with_errors' if @author.errors[:email].any? %>">
-   <%= label_tag "email", "Email" %>
+   <%= label_tag "email", "email" %>
    <%= text_field_tag "email", @author.email %>
  </div>
 
