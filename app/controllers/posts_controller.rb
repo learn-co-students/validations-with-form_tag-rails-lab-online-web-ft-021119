@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    
+
   end
 
   def update
@@ -19,7 +19,6 @@ class PostsController < ApplicationController
     else
       render :edit
     end
-    #redirect_to post_path(@post)
   end
 
   private

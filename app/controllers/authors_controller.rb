@@ -2,7 +2,6 @@ class AuthorsController < ApplicationController
   def show
     @author = Author.find(params[:id])
   end
-  #done
 
   def new
     @author = Author.new
@@ -18,7 +17,6 @@ class AuthorsController < ApplicationController
     else
       render :new
     end
-    #redirect_to author_path(@author)
   end
 
   private
